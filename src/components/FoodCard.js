@@ -3,10 +3,10 @@ const FoodCard = ({ food }) => {
     <div className="shadow-lg p-5 relative border rounded-md">
       <h3 className="text-lg font-semibold text-cyan-600">{food.title}</h3>
       <div className="my-3 w-full">
+        <p className="text-gray-400 mb-1">Prep-Time: {food.preptime} minutes</p>
         <p className="text-gray-500">
-          Method: <br /> {food.method.slice(0, 50)}...
+          Method: <br /> {food.method.slice(0, 30)}...
         </p>
-        <p className="text-gray-400 mt-1">Prep-Time: {food.preptime} minutes</p>
       </div>
       <h5 className="font-semibold text-sm text-gray-500">
         Author: <span className="text-gray-400">{food.author}</span>
