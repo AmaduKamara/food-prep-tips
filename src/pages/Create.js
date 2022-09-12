@@ -1,20 +1,39 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import supabase from "../config/supabaseClient";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
-  const [prepTime, setPrepTime] = useState("");
+  const [preptime, setPreptime] = useState("");
   const [author, setAuthor] = useState("");
   const [rating, setRating] = useState();
   const [formError, setFormError] = useState();
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title || !method || !prepTime || !rating || !author) {
+    if (!title || !method || !preptime || !rating || !author) {
       setFormError("Please fill in all the fields correctly");
       return;
     }
+
+    const { data, error } = await supabase
+      .from("food-prep-tips")
+      .insert([{ title, preptime, method, rating, author }]);
+
+    if (error) {
+      console.log(error);
+      setFormError("Please fill in all the fields correctly");
+    }
+
+    if (data) {
+      console.log(data);
+      setFormError(null);
+    }
+
+    navigate("/");
   };
 
   return (
@@ -47,8 +66,8 @@ const Create = () => {
           <input
             id="time"
             type="number"
-            value={prepTime}
-            onChange={(e) => setPrepTime(e.target.value)}
+            value={preptime}
+            onChange={(e) => setPreptime(e.target.value)}
             className="block w-full border py-2 px-4 rounded-md focus:outline-cyan-300"
             required
           />
