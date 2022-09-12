@@ -11,7 +11,7 @@ const FoodCard = ({ food }) => {
       <h5 className="font-semibold text-sm text-gray-500">
         Author: <span className="text-gray-400">{food.author}</span>
       </h5>
-      <div className="absolute top-0 right-0 -mt-4 bg-cyan-500 w-10 h-10 flex items-center justify-center text-white rounded-full">
+      <div className="absolute top-0 right-0 -mt-4 bg-cyan-500 w-10 h-10 flex items-center justify-center text-white rounded-full shadow-lg">
         {food.rating}
       </div>
     </div>
