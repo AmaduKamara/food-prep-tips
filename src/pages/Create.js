@@ -7,21 +7,21 @@ const Create = () => {
   const [method, setMethod] = useState("");
   const [preptime, setPreptime] = useState("");
   const [author, setAuthor] = useState("");
-  const [rating, setRating] = useState();
+  const [review, setreview] = useState("5");
   const [formError, setFormError] = useState();
 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title || !method || !preptime || !rating || !author) {
+    if (!title || !method || !preptime || !review || !author) {
       setFormError("Please fill in all the fields correctly");
       return;
     }
 
     const { data, error } = await supabase
       .from("food-prep-tips")
-      .insert([{ title, preptime, method, rating, author }]);
+      .insert([{ title, preptime, method, review, author }]);
 
     if (error) {
       console.log(error);
@@ -73,24 +73,26 @@ const Create = () => {
           />
         </div>
         <div className="mt-4">
-          <label htmlFor="rating" className="text-lg block mb-1">
-            Rating
+          <label htmlFor="review" className="text-lg block mb-1">
+            Review
           </label>
           <input
-            id="rating"
-            type="number"
-            value={rating}
-            onChange={(e) => setRating(e.target.value)}
+            id="review"
+            type="text"
+            value={review}
+            onChange={(e) => setreview(e.target.value)}
             className="block w-full border py-2 px-4 rounded-md focus:outline-cyan-300"
             required
+            maxLength={2}
+            placeholder="5"
           />
         </div>
         <div className="mt-4">
-          <label htmlFor="rating" className="text-lg block mb-1">
+          <label htmlFor="author" className="text-lg block mb-1">
             Author
           </label>
           <input
-            id="rating"
+            id="author"
             type="text"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
