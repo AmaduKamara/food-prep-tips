@@ -5,7 +5,7 @@ const FoodCard = ({ food }) => {
       <div className="my-3 w-full">
         <p className="text-gray-400 mb-1">Prep-Time: {food.preptime} minutes</p>
         <p className="text-gray-500">
-          Method: <br /> {food.method.slice(0, 30)}...
+          <span className="font-semibold">Method:</span> <br /> {food.method.slice(0, 30)}...
         </p>
       </div>
       <h5 className="font-semibold text-sm text-gray-500">
