@@ -19,5 +19,7 @@
 ### Desktop
 ![image](https://user-images.githubusercontent.com/50941074/190902511-aafbc0b9-5c31-4ab0-8f12-fa7e0f2bf7cc.png)
 
+![image](https://user-images.githubusercontent.com/50941074/190902784-c58b7d04-f32c-4543-a75b-46379766e6c9.png)
+
 ### Mobile
 ![image](https://user-images.githubusercontent.com/50941074/190902485-4e8335d2-7187-42d8-bbbf-19736e8a88d7.png)
