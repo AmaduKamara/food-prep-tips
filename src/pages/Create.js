@@ -7,7 +7,7 @@ const Create = () => {
   const [method, setMethod] = useState("");
   const [preptime, setPreptime] = useState("");
   const [author, setAuthor] = useState("");
-  const [review, setreview] = useState("5");
+  const [review, setReview] = useState("5");
   const [formError, setFormError] = useState();
 
   const navigate = useNavigate();
@@ -80,7 +80,7 @@ const Create = () => {
             id="review"
             type="text"
             value={review}
-            onChange={(e) => setreview(e.target.value)}
+            onChange={(e) => setReview(e.target.value)}
             className="block w-full border py-2 px-4 rounded-md focus:outline-cyan-300"
             required
             maxLength={2}
