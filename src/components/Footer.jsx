@@ -9,7 +9,7 @@ function Footer() {
         </span>
         <span className="text-xs text-gray-400">
           Developed by:{" "}
-          <a href="https://amkam.vercel.app" target="_blank" rel="noreferrer">
+          <a className="text-cyan-500" href="https://amkam.vercel.app" target="_blank" rel="noreferrer">
             Amkam WebAvenger
           </a>
         </span>
