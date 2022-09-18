@@ -24,12 +24,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-16 py-16">
+    <div className="px-8 mx:container mx:mx-auto md:px-16 py-16">
       {fetchError && <p>{fetchError}</p>}
       {food && (
         <div>
           {/* Order-by buttons */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:grid-cols-4">
             {food.map((f) => (
               <FoodCard key={f.id} food={f} />
             ))}
