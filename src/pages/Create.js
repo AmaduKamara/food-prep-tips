@@ -37,9 +37,9 @@ const Create = () => {
   };
 
   return (
-    <div className="container mx-auto px-16 py-16 flex justify-center">
+    <div className="mx-6 md:container md:mx-auto md:px-16 py-16 flex justify-center">
       <form
-        className="w-3/5 shadow-xl bg-white p-5 rounded-md"
+        className="md:w-3/5 shadow-xl bg-white p-5 rounded-md"
         onSubmit={handleSubmit}
       >
         <h2 className="text-xl font-semibold text-cyan-600 mt-5">
@@ -115,7 +115,7 @@ const Create = () => {
         </div>
         <div>{formError && <p>{formError}</p>}</div>
         <div className="flex justify-end">
-          <div>
+          <div className="flex">
             <Link
               to="/"
               className="border py-2 px-12 mt-5 mr-5 hover:border-cyan-500 rounded-md"
