@@ -4,7 +4,7 @@ import FoodCard from "./../components/FoodCard";
 
 const Home = () => {
   const [fetchError, setFetchError] = useState(null);
-  const [food, setFood] = useState(null);
+  const [foods, setFoods] = useState(null);
 
   useEffect(() => {
     const fetchFood = async () => {
@@ -12,11 +12,11 @@ const Home = () => {
 
       if (error) {
         setFetchError("Could not fetch the food");
-        setFood(null);
+        setFoods(null);
         // console.log(error);
       }
       if (data) {
-        setFood(data);
+        setFoods(data);
         setFetchError(null);
       }
     };
@@ -26,12 +26,12 @@ const Home = () => {
   return (
     <div className="px-8 mx:container mx:mx-auto md:px-16 py-16">
       {fetchError && <p>{fetchError}</p>}
-      {food && (
+      {foods && (
         <div>
           {/* Order-by buttons */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:grid-cols-4">
-            {food.map((f) => (
-              <FoodCard key={f.id} food={f} />
+            {foods.map((food) => (
+              <FoodCard key={food.id} food={food} />
             ))}
           </div>
         </div>

@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="bg-white py-4 shadow-xl sticky top-0 z-50">
       <div className="px-4 md:container md:mx-auto flex justify-between items-center">
         <h1 className="text-xl md:text-2xl text-cyan-500 font-thin">
-          FoodPrep Tips
+          <Link to="/">FoodPrep Tips</Link>
         </h1>
         <ul className="flex text-cyan-500">
           <li className="mx-3 md:mx-10">
