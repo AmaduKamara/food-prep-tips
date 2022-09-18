@@ -7,6 +7,9 @@
 - Supabase
 - Tailwind CSS
 
+## Author
+- Amadu Kamara
+
 ## Getting Started
 
 - Run `git clone https://github.com/AmaduKamara/food-prep-tips.git` to clone the project
