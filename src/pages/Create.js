@@ -43,7 +43,7 @@ const Create = () => {
         onSubmit={handleSubmit}
       >
         <h2 className="text-xl font-semibold text-cyan-600 mt-5">
-          Create a Food Prep Tips
+          Create a Food Prep Tip
         </h2>
         <div className="mt-8">
           <label htmlFor="title" className="text-lg block mb-1">
