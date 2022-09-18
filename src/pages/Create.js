@@ -113,7 +113,7 @@ const Create = () => {
             required
           />
         </div>
-        <div>{formError && <p>{formError}</p>}</div>
+        <div className="px-6 md:container md:mx-auto w-full">{formError && <p>{formError}</p>}</div>
         <div className="flex justify-end">
           <div className="flex">
             <Link
