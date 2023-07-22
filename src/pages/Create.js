@@ -14,6 +14,7 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!title || !method || !preptime || !review || !author) {
       setFormError("Please fill in all the fields correctly");
       return;
@@ -28,7 +29,6 @@ const Create = () => {
     }
 
     if (data) {
-      console.log(data);
       setFormError(null);
     }
 
