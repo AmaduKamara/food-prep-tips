@@ -7,7 +7,7 @@ const Create = () => {
   const [method, setMethod] = useState("");
   const [preptime, setPreptime] = useState("");
   const [author, setAuthor] = useState("");
-  const [review, setReview] = useState("5");
+  const [review, setReview] = useState(0);
   const [formError, setFormError] = useState();
 
   const navigate = useNavigate();
@@ -24,7 +24,6 @@ const Create = () => {
       .insert([{ title, preptime, method, review, author }]);
 
     if (error) {
-      console.log(error);
       setFormError("Please fill in all the fields correctly");
     }
 
@@ -80,11 +79,11 @@ const Create = () => {
             id="review"
             type="text"
             value={review}
-            onChange={(e) => setReview(e.target.value)}
+            onChange={(e) => setReview(+e.target.value)}
             className="block w-full border py-2 px-4 rounded-md focus:outline-cyan-300"
             required
-            maxLength={2}
-            placeholder="5"
+            min={0}
+            max={5}
           />
         </div>
         <div className="mt-4">
@@ -113,7 +112,9 @@ const Create = () => {
             required
           />
         </div>
-        <div className="px-6 md:container md:mx-auto w-full">{formError && <p>{formError}</p>}</div>
+        <div className="px-6 md:container md:mx-auto w-full">
+          {formError && <p>{formError}</p>}
+        </div>
         <div className="flex justify-end">
           <div className="flex">
             <Link
