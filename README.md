@@ -1,6 +1,6 @@
-# Starter React Project for the Learning Supabase
+# Starter React Project for the Learning of Supabase
 
-> This is a project based on learning about Supabase for backend as a service alongside React frontend for storing tips on food preparation to the Supabase backend.
+> This is a project based on learning about Supabase for the backend as a service alongside React frontend for storing tips on food preparation to the Supabase backend.
 
 ## Built With
 - React
