@@ -13,7 +13,6 @@ const Home = () => {
       if (error) {
         setFetchError("Could not fetch the food");
         setFoods(null);
-        // console.log(error);
       }
       if (data) {
         setFoods(data);
