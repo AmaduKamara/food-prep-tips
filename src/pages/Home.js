@@ -7,7 +7,7 @@ const Home = () => {
   const [foods, setFoods] = useState(null);
 
   useEffect(() => {
-    const fetchFood = async () => {
+    const fetchFoods = async () => {
       const { data, error } = await supabase.from("food-prep-tips").select();
 
       if (error) {
@@ -19,7 +19,7 @@ const Home = () => {
         setFetchError(null);
       }
     };
-    fetchFood();
+    fetchFoods();
   }, []);
 
   return (
