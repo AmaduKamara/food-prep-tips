@@ -11,7 +11,7 @@ const Home = () => {
       const { data, error } = await supabase.from("food-prep-tips").select();
 
       if (error) {
-        setFetchError("Could not fetch the food");
+        setFetchError("Could not fetch the foods");
         setFoods(null);
       }
       if (data) {
