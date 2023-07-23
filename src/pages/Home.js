@@ -59,7 +59,7 @@ const Home = () => {
             </button>
             <button
               className={`${
-                orderBy === "rating" ? "bg-cyan-700" : ""
+                orderBy === "review" ? "bg-cyan-700" : ""
               } mr-6 bg-cyan-500 py-1 px-3 rounded-full text-slate-100 mb-4`}
               type="button"
               onClick={() => setOrderBy("review")}
