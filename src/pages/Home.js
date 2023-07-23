@@ -22,6 +22,10 @@ const Home = () => {
     fetchFoods();
   }, []);
 
+  const handleDelete = (id) => {
+    setFoods((prevFoods) => prevFoods.filter((food) => food.id !== id));
+  };
+
   return (
     <div className="px-8 mx:container mx:mx-auto md:px-16 py-16">
       {fetchError && <p>{fetchError}</p>}
@@ -30,7 +34,7 @@ const Home = () => {
           {/* Order-by buttons */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {foods.map((food) => (
-              <FoodCard key={food.id} food={food} />
+              <FoodCard key={food.id} food={food} onFoodDelete={handleDelete} />
             ))}
           </div>
         </div>
