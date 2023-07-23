@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom";
+import supabase from "../config/supabaseClient";
 
-const FoodCard = ({ food }) => {
+const FoodCard = ({ food, onFoodDelete }) => {
+
+  const handleDeleteFood = async () => {
+    const { data, error } = await supabase
+      .from("food-prep-tips")
+      .delete()
+      .eq("id", food.id);
+
+    if (error) {
+      console.log(error);
+    }
+
+    if (data) {
+      onFoodDelete(food.id);
+    }
+  };
+
   return (
     <div className="shadow-lg p-5 relative rounded-md border-l-4 border-l-cyan-600 border-t-2 border-t-gray-200 h-auto">
       <h3 className="text-lg font-semibold text-cyan-600">{food.title}</h3>
@@ -20,12 +37,19 @@ const FoodCard = ({ food }) => {
       <div className="flex justify-end absolute bottom-0 right-0 mr-4 mb-4">
         <Link to={`/${food.id}`}>
           <i
-            className="material-icons bg-gray-200 p-2 rounded-full text-cyan-600"
+            className="material-icons bg-gray-200 p-2 rounded-full text-cyan-600 mr-3"
             title="Edit food"
           >
             edit
           </i>
         </Link>
+        <i
+          className="material-icons bg-gray-200 p-2 rounded-full text-red-300 cursor-pointer"
+          title="Delete food"
+          onClick={handleDeleteFood}
+        >
+          delete
+        </i>
       </div>
     </div>
   );
