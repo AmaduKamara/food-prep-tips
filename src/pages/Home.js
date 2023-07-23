@@ -28,7 +28,7 @@ const Home = () => {
       {foods && (
         <div>
           {/* Order-by buttons */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {foods.map((food) => (
               <FoodCard key={food.id} food={food} />
             ))}
