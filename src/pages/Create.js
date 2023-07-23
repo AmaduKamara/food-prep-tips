@@ -77,7 +77,7 @@ const Create = () => {
           </label>
           <input
             id="review"
-            type="text"
+            type="number"
             value={review}
             onChange={(e) => setReview(+e.target.value)}
             className="block w-full border py-2 px-4 rounded-md focus:outline-cyan-300"
@@ -112,7 +112,7 @@ const Create = () => {
             required
           />
         </div>
-        <div className="px-6 md:container md:mx-auto w-full">
+        <div className="py-6 md:container md:mx-auto w-full text-red-300">
           {formError && <p>{formError}</p>}
         </div>
         <div className="flex justify-end">
