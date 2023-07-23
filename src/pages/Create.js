@@ -5,7 +5,7 @@ import supabase from "../config/supabaseClient";
 const Create = () => {
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
-  const [preptime, setPreptime] = useState("");
+  const [preptime, setPrepTime] = useState("");
   const [author, setAuthor] = useState("");
   const [review, setReview] = useState(0);
   const [formError, setFormError] = useState();
@@ -66,7 +66,7 @@ const Create = () => {
             id="time"
             type="number"
             value={preptime}
-            onChange={(e) => setPreptime(e.target.value)}
+            onChange={(e) => setPrepTime(e.target.value)}
             className="block w-full border py-2 px-4 rounded-md focus:outline-cyan-300"
             required
           />
