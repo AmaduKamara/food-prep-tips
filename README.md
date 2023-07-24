@@ -20,9 +20,10 @@
 ## App screenshots
 
 ### Desktop
-![image](https://user-images.githubusercontent.com/50941074/190902511-aafbc0b9-5c31-4ab0-8f12-fa7e0f2bf7cc.png)
 
-![image](https://user-images.githubusercontent.com/50941074/190902828-1df5a6f6-627b-49bf-8b70-8f77acc10cc6.png)
+<img width="1813" alt="Screenshot 2023-07-24 at 9 42 33 AM" src="https://github.com/AmaduKamara/food-prep-tips/assets/50941074/8571d972-3664-4ba6-8a9b-2345c333d98a">
 
 ### Mobile
-![image](https://user-images.githubusercontent.com/50941074/190902485-4e8335d2-7187-42d8-bbbf-19736e8a88d7.png)
+
+<img width="470" alt="Screenshot 2023-07-24 at 9 46 13 AM" src="https://github.com/AmaduKamara/food-prep-tips/assets/50941074/5a2f65a1-2a22-413c-b4f3-97bcbb62a48c">
+
