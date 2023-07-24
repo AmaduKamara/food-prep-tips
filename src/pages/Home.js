@@ -31,7 +31,7 @@ const Home = () => {
   };
 
   return (
-    <div className="px-8 mx:container mx:mx-auto md:px-16 py-16">
+    <div className="px-8 mx:container mx:mx-auto md:px-16 py- 6 md:py-16">
       {fetchError && <p>{fetchError}</p>}
       {foods && (
         <div>
@@ -42,7 +42,7 @@ const Home = () => {
             <button
               className={`${
                 orderBy === "created_at" ? "bg-cyan-700" : ""
-              } mr-6 bg-cyan-500 py-1 px-3 rounded-full text-slate-100 mb-4`}
+              } mr-3 md:mr-6 bg-cyan-500 py-1 px-2 md:px-3 rounded-full text-slate-100 mb-4`}
               type="button"
               onClick={() => setOrderBy("created_at")}
             >
@@ -51,7 +51,7 @@ const Home = () => {
             <button
               className={`${
                 orderBy === "title" ? "bg-cyan-700" : ""
-              } mr-6 bg-cyan-500 py-1 px-3 rounded-full text-slate-100 mb-4`}
+              } mr-3 md:mr-6 bg-cyan-500 py-1 px-2 md:px-3 rounded-full text-slate-100 mb-4`}
               type="button"
               onClick={() => setOrderBy("title")}
             >
@@ -60,7 +60,7 @@ const Home = () => {
             <button
               className={`${
                 orderBy === "review" ? "bg-cyan-700" : ""
-              } mr-6 bg-cyan-500 py-1 px-3 rounded-full text-slate-100 mb-4`}
+              } mr-3 md:mr-6 bg-cyan-500 py-1 px-2 md:px-3 rounded-full text-slate-100 mb-4`}
               type="button"
               onClick={() => setOrderBy("review")}
             >
