@@ -17,6 +17,9 @@
 - Run `npm i` to install the project dependencies
 - Run `npm start` to start the development server and view the app live on your local machine
 
+## Live Demo
+Visit the Live Demo at [FoodPrep Tips](https://food-prep-tips.vercel.app/)
+
 ## App screenshots
 
 ### Desktop
